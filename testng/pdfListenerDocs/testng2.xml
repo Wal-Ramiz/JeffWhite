@@ -1,0 +1,22 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite
+    name="Smoke Test Suite"
+    verbose="10" >
+	<listeners>
+		<listener class-name="com.hc1.testautomation.lib.Reports"/>
+		<listener class-name="com.hc1.testautomation.lib.PDFListener"/>
+	</listeners>	
+    <test name="Smoke Test Suite" >
+        <classes>
+            <class name="com.hc1.testautomation.tests.smoketests.SmokeTests" >
+                <methods>
+					<include name="CreateNewOrganization"/> 
+					<include name="EditOrganization"/> 
+					<include name="ValidateNewEditedOrganization"/>
+                </methods>
+            </class>
+            <!-- com.hc1.testautomation.smoketests.SmokeTests -->
+        </classes>
+    </test>
+
+</suite>
